@@ -23,7 +23,9 @@
     margin-top: 24px !important;
     float: right;
   }
-  
+  .statutAdd{
+    display: none;
+  }
   .data {
     margin-top: 15px;
   }

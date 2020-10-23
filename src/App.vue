@@ -34,9 +34,9 @@ export default {
   },
   data() {
     return {
-      url: "http://localhost/laravel-rest-api/public/api/tasks",
+      url: "http://localhost/laravel-api/public/api",
       tasks: [],
-      form: { task: "", prio: "", isEdit: false },
+      form: { task: "", prio: "", statut:'', isEdit: false },
       loader: false
     };
   },
@@ -44,7 +44,7 @@ export default {
     getTasks() {
       this.loader = true;
 
-      axios.get(this.url).then(data => {
+      axios.get(`${this.url}/tasks`).then(data => {
         this.tasks = data.data;
         this.loader = false;
       });
@@ -53,7 +53,7 @@ export default {
       this.loader = true;
 
       axios
-        .delete(`${this.url}/${id}`)
+        .delete(`${this.url}/task/delete/${id}`)
         .then(() => {
           this.getTasks();
         })
@@ -65,9 +65,10 @@ export default {
       this.loader = true;
 
       axios
-        .post(this.url, {
-          task: data.task,
+        .post(`${this.url}/task/add`, {
+          task_name: data.task,
           prio: data.prio,
+          statut: '0'
         })
         .then(() => {
           this.getTasks();
@@ -80,7 +81,7 @@ export default {
       this.loader = true;
 
       axios
-        .put(`${this.url}/${data.id}`, {
+        .put(`${this.url}/task/edit/${data.id}`, {
           task: data.task,
           prio: data.prio,
           statut : data.statut

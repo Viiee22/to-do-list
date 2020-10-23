@@ -1,8 +1,12 @@
 <template>
   <tr>
-    <td>{{ task.id }}</td>
-    <td>{{ task.first_name }} {{ task.last_name }}</td>
-    <td>{{ task.email }}</td>
+    
+    <td>{{ task.statut }}<input type="checkbox" 
+       :value="task.statut" 
+       id="statut"
+       @change="check($event)"></td>
+    <td>{{ task.task_name }}</td>
+    <td>{{ task.prio }}</td>
     <td>
       <button class="mini ui blue button" @click="onEdit">Edit</button>
       <button class="mini ui red button" @click="onDelete">Delete</button>
