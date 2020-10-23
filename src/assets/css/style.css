@@ -1,0 +1,39 @@
+
+#app{
+    background-image: url("../images/backgroundCreated.png");
+    background-color: #cccccc; 
+    height: 500px; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height: 100%;
+    color: #fff !important;
+}
+.vue-color {
+    padding: 25px 5px 25px 5px;
+    background: #41b883 !important;
+    color: #cccccc !important;
+  }
+  .main.container {
+    margin-top: 60px;
+    color: #fff !important;
+  }
+  
+  .submit-button {
+    margin-top: 24px !important;
+    float: right;
+  }
+  
+  .data {
+    margin-top: 15px;
+  }
+  
+  thead tr th {
+    background: #e0e0e0 !important;
+  }
+  label{
+      color : #fff;
+  }
+  .ui.inverted.dimmer {
+    background-color: rgba(255, 255, 255, 0) !important;
+  }
