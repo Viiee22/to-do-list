@@ -1,27 +1,38 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: Brush;
+  src: url(../fonts/Regular\ Brush.otf);
+}
 
 #app{
-    background-image: url("../images/backgroundCreated.png");
-    background-color: #cccccc; 
-    height: 500px; 
+    background-image: url("../images/backgroundCreated.png"); 
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover; 
     height: 100%;
-    color: #fff !important;
+    font-family: Poppins;
 }
 .vue-color {
     padding: 25px 5px 25px 5px;
     background: #41b883 !important;
-    color: #cccccc !important;
   }
   .main.container {
     margin-top: 60px;
     color: #fff !important;
   }
-  
+  .title{
+    color:#fff;
+    font-family: Brush;
+    font-size: 30px;
+    padding-left: 28%;
+  }
   .submit-button {
-    margin-top: 24px !important;
+    margin: 26px 16px 0px 0px !important;
     float: right;
+    font-size: 15px !important;
   }
   .statutAdd{
     display: none;
@@ -29,13 +40,27 @@
   .data {
     margin-top: 15px;
   }
-  
-  thead tr th {
-    background: #e0e0e0 !important;
-  }
-  label{
-      color : #fff;
-  }
   .ui.inverted.dimmer {
     background-color: rgba(255, 255, 255, 0) !important;
   }
+  .button{
+    font-family: Poppins !important;
+    font-size: 12px !important;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 35px;
+  }
+  .label{
+    font-size: 15px !important;
+  }
+  .material-icons { 
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  thead tr th {
+    background: #e0e0e0 !important;
+  }
+
+  

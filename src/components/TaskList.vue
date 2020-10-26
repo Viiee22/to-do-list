@@ -39,11 +39,9 @@ export default {
   },
   methods: {
     onDelete(id) {
-      // window.console.log("task list delete " + id);
       this.$emit("onDelete", id);
     },
     onEdit(data) {
-      // window.console.log("task list edit " + data);
       this.$emit("onEdit", data);
     }
   }
